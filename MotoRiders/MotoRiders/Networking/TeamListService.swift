@@ -8,6 +8,7 @@
 
 import Foundation
 
+//TODO: - Improve All services so there will be Request and Mapper. 
 class TeamListService {
     typealias JSONDictionary = [String: Any]
     
@@ -50,16 +51,18 @@ class TeamListService {
             return
         }
         guard let responseArray = response,
-            let array = responseArray.first as? JSONDictionary else {
+            let array = responseArray.first?.value as? [JSONDictionary] else {
                 print("Dictionary does not contain data key\n")
                 return
         }
-        let test = array.first as? [JSONDictionary]
-        if  let name = test!["name"] as? String,
-            let uid = test!["uid"] as? String {
-            teamData.append(Team(name: name, uid: uid))
-        } else {
+        for index in 0...array.count-1 {
+            if let elements = array[index] as? JSONDictionary {
+                let name = elements["name"] as? String
+                let uid = elements["uid"] as? String
+                teamData.append(Team(name: name!, uid: uid!))
+            } else {
             print("Problem parsing params\n")
+            }
         }
     }
     

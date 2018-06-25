@@ -11,14 +11,22 @@
 		840008CF20DB9A3500032504 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840008CD20DB9A3500032504 /* Main.storyboard */; };
 		840008D120DB9A3500032504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840008D020DB9A3500032504 /* Assets.xcassets */; };
 		840008D420DB9A3500032504 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840008D220DB9A3500032504 /* LaunchScreen.storyboard */; };
-		840008DC20DB9E9E00032504 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840008DB20DB9E9E00032504 /* MainTabBarController.swift */; };
-		840008DE20DBA31200032504 /* TeamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840008DD20DBA31200032504 /* TeamsTableViewController.swift */; };
-		840008E020DBA9A700032504 /* TeamNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840008DF20DBA9A700032504 /* TeamNameCell.swift */; };
-		840008E220DBAE2B00032504 /* RidersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840008E120DBAE2B00032504 /* RidersTableViewController.swift */; };
+		840008DE20DBA31200032504 /* TeamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840008DD20DBA31200032504 /* TeamController.swift */; };
+		840008E020DBA9A700032504 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840008DF20DBA9A700032504 /* TeamCell.swift */; };
+		840008E220DBAE2B00032504 /* RidersInTeamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840008E120DBAE2B00032504 /* RidersInTeamController.swift */; };
 		840008E420DBAF8500032504 /* RiderNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840008E320DBAF8500032504 /* RiderNameCell.swift */; };
 		840008E920DBB1D700032504 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840008E820DBB1D700032504 /* Constants.swift */; };
 		840008EB20DBB2C800032504 /* TeamListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840008EA20DBB2C800032504 /* TeamListService.swift */; };
 		840008ED20DBB35000032504 /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840008EC20DBB35000032504 /* TeamModel.swift */; };
+		840008EF20DD670C00032504 /* RidersListServise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840008EE20DD670C00032504 /* RidersListServise.swift */; };
+		840008F120DD6DD800032504 /* RidersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840008F020DD6DD800032504 /* RidersModel.swift */; };
+		840008F320DE982300032504 /* RiderDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840008F220DE982300032504 /* RiderDetailsController.swift */; };
+		8429C90120E1842D00C02B9E /* RidersFullListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429C90020E1842D00C02B9E /* RidersFullListCell.swift */; };
+		8429C90320E1844C00C02B9E /* RidersFullListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429C90220E1844C00C02B9E /* RidersFullListController.swift */; };
+		843BFBDA20DF5D7400C3A787 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843BFBD920DF5D7400C3A787 /* ImageCell.swift */; };
+		843BFBDC20DF62B300C3A787 /* NameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843BFBDB20DF62B300C3A787 /* NameCell.swift */; };
+		843BFBDE20E0FE8200C3A787 /* RiderDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843BFBDD20E0FE8200C3A787 /* RiderDetailService.swift */; };
+		843BFBE020E0FEF200C3A787 /* RiderDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843BFBDF20E0FEF200C3A787 /* RiderDetailModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,14 +36,22 @@
 		840008D020DB9A3500032504 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		840008D320DB9A3500032504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		840008D520DB9A3500032504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		840008DB20DB9E9E00032504 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		840008DD20DBA31200032504 /* TeamsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewController.swift; sourceTree = "<group>"; };
-		840008DF20DBA9A700032504 /* TeamNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamNameCell.swift; sourceTree = "<group>"; };
-		840008E120DBAE2B00032504 /* RidersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidersTableViewController.swift; sourceTree = "<group>"; };
+		840008DD20DBA31200032504 /* TeamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamController.swift; sourceTree = "<group>"; };
+		840008DF20DBA9A700032504 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
+		840008E120DBAE2B00032504 /* RidersInTeamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidersInTeamController.swift; sourceTree = "<group>"; };
 		840008E320DBAF8500032504 /* RiderNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiderNameCell.swift; sourceTree = "<group>"; };
 		840008E820DBB1D700032504 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		840008EA20DBB2C800032504 /* TeamListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListService.swift; sourceTree = "<group>"; };
 		840008EC20DBB35000032504 /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
+		840008EE20DD670C00032504 /* RidersListServise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidersListServise.swift; sourceTree = "<group>"; };
+		840008F020DD6DD800032504 /* RidersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidersModel.swift; sourceTree = "<group>"; };
+		840008F220DE982300032504 /* RiderDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiderDetailsController.swift; sourceTree = "<group>"; };
+		8429C90020E1842D00C02B9E /* RidersFullListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidersFullListCell.swift; sourceTree = "<group>"; };
+		8429C90220E1844C00C02B9E /* RidersFullListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidersFullListController.swift; sourceTree = "<group>"; };
+		843BFBD920DF5D7400C3A787 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		843BFBDB20DF62B300C3A787 /* NameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCell.swift; sourceTree = "<group>"; };
+		843BFBDD20E0FE8200C3A787 /* RiderDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiderDetailService.swift; sourceTree = "<group>"; };
+		843BFBDF20E0FEF200C3A787 /* RiderDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiderDetailModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,10 +85,10 @@
 			isa = PBXGroup;
 			children = (
 				840008C920DB9A3500032504 /* AppDelegate.swift */,
-				840008DB20DB9E9E00032504 /* MainTabBarController.swift */,
 				840008E720DBB1B900032504 /* Networking */,
-				840008E520DBB03600032504 /* TeamName */,
+				840008E520DBB03600032504 /* Team */,
 				840008E620DBB05800032504 /* Riders */,
+				840008F420DE982B00032504 /* RidersDetails */,
 				840008CD20DB9A3500032504 /* Main.storyboard */,
 				840008D020DB9A3500032504 /* Assets.xcassets */,
 				840008D220DB9A3500032504 /* LaunchScreen.storyboard */,
@@ -81,21 +97,22 @@
 			path = MotoRiders;
 			sourceTree = "<group>";
 		};
-		840008E520DBB03600032504 /* TeamName */ = {
+		840008E520DBB03600032504 /* Team */ = {
 			isa = PBXGroup;
 			children = (
 				840008EC20DBB35000032504 /* TeamModel.swift */,
-				840008DD20DBA31200032504 /* TeamsTableViewController.swift */,
-				840008DF20DBA9A700032504 /* TeamNameCell.swift */,
+				840008DD20DBA31200032504 /* TeamController.swift */,
+				840008DF20DBA9A700032504 /* TeamCell.swift */,
 			);
-			path = TeamName;
+			path = Team;
 			sourceTree = "<group>";
 		};
 		840008E620DBB05800032504 /* Riders */ = {
 			isa = PBXGroup;
 			children = (
-				840008E120DBAE2B00032504 /* RidersTableViewController.swift */,
-				840008E320DBAF8500032504 /* RiderNameCell.swift */,
+				840008F020DD6DD800032504 /* RidersModel.swift */,
+				8429C8FF20E1840900C02B9E /* RidersFullList */,
+				8429C8FE20E183D200C02B9E /* RidersInTeam */,
 			);
 			path = Riders;
 			sourceTree = "<group>";
@@ -105,8 +122,47 @@
 			children = (
 				840008E820DBB1D700032504 /* Constants.swift */,
 				840008EA20DBB2C800032504 /* TeamListService.swift */,
+				840008EE20DD670C00032504 /* RidersListServise.swift */,
+				843BFBDD20E0FE8200C3A787 /* RiderDetailService.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		840008F420DE982B00032504 /* RidersDetails */ = {
+			isa = PBXGroup;
+			children = (
+				843BFBD820DF5D3E00C3A787 /* Cell */,
+				843BFBDF20E0FEF200C3A787 /* RiderDetailModel.swift */,
+				840008F220DE982300032504 /* RiderDetailsController.swift */,
+			);
+			path = RidersDetails;
+			sourceTree = "<group>";
+		};
+		8429C8FE20E183D200C02B9E /* RidersInTeam */ = {
+			isa = PBXGroup;
+			children = (
+				840008E120DBAE2B00032504 /* RidersInTeamController.swift */,
+				840008E320DBAF8500032504 /* RiderNameCell.swift */,
+			);
+			path = RidersInTeam;
+			sourceTree = "<group>";
+		};
+		8429C8FF20E1840900C02B9E /* RidersFullList */ = {
+			isa = PBXGroup;
+			children = (
+				8429C90020E1842D00C02B9E /* RidersFullListCell.swift */,
+				8429C90220E1844C00C02B9E /* RidersFullListController.swift */,
+			);
+			path = RidersFullList;
+			sourceTree = "<group>";
+		};
+		843BFBD820DF5D3E00C3A787 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				843BFBD920DF5D7400C3A787 /* ImageCell.swift */,
+				843BFBDB20DF62B300C3A787 /* NameCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,13 +238,21 @@
 			files = (
 				840008CA20DB9A3500032504 /* AppDelegate.swift in Sources */,
 				840008E420DBAF8500032504 /* RiderNameCell.swift in Sources */,
+				843BFBE020E0FEF200C3A787 /* RiderDetailModel.swift in Sources */,
+				843BFBDC20DF62B300C3A787 /* NameCell.swift in Sources */,
 				840008ED20DBB35000032504 /* TeamModel.swift in Sources */,
-				840008E020DBA9A700032504 /* TeamNameCell.swift in Sources */,
-				840008DE20DBA31200032504 /* TeamsTableViewController.swift in Sources */,
+				8429C90320E1844C00C02B9E /* RidersFullListController.swift in Sources */,
+				8429C90120E1842D00C02B9E /* RidersFullListCell.swift in Sources */,
+				840008F320DE982300032504 /* RiderDetailsController.swift in Sources */,
+				840008E020DBA9A700032504 /* TeamCell.swift in Sources */,
+				840008DE20DBA31200032504 /* TeamController.swift in Sources */,
+				843BFBDA20DF5D7400C3A787 /* ImageCell.swift in Sources */,
 				840008EB20DBB2C800032504 /* TeamListService.swift in Sources */,
 				840008E920DBB1D700032504 /* Constants.swift in Sources */,
-				840008DC20DB9E9E00032504 /* MainTabBarController.swift in Sources */,
-				840008E220DBAE2B00032504 /* RidersTableViewController.swift in Sources */,
+				840008F120DD6DD800032504 /* RidersModel.swift in Sources */,
+				843BFBDE20E0FE8200C3A787 /* RiderDetailService.swift in Sources */,
+				840008EF20DD670C00032504 /* RidersListServise.swift in Sources */,
+				840008E220DBAE2B00032504 /* RidersInTeamController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

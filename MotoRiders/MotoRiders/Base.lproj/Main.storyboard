@@ -10,22 +10,63 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Riders Full List Controller-->
         <scene sceneID="GTm-S4-cVD">
             <objects>
-                <tableViewController id="2l2-Nb-Cgd" sceneMemberID="viewController">
+                <tableViewController id="2l2-Nb-Cgd" customClass="RidersFullListController" customModule="MotoRiders" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3Lh-u1-Y7d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ridersListCell" id="cof-7c-f4f">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ridersListCell" rowHeight="100" id="cof-7c-f4f" customClass="RidersFullListCell" customModule="MotoRiders" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cof-7c-f4f" id="don-de-tlb">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uy1-Dn-LQg">
+                                            <rect key="frame" x="16" y="9" width="80" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="CEO-Yc-EfC"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rider Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1D-79-nIg">
+                                            <rect key="frame" x="104" y="11" width="211" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="Q3v-J3-n7V"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8x2-fq-hyI">
+                                            <rect key="frame" x="104" y="40" width="50" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="x1D-79-nIg" firstAttribute="leading" secondItem="8x2-fq-hyI" secondAttribute="leading" id="7QD-5D-s6m"/>
+                                        <constraint firstItem="x1D-79-nIg" firstAttribute="top" secondItem="don-de-tlb" secondAttribute="topMargin" id="CzN-hO-Mi5"/>
+                                        <constraint firstItem="8x2-fq-hyI" firstAttribute="top" secondItem="x1D-79-nIg" secondAttribute="bottom" constant="8" symbolic="YES" id="One-A4-e5g"/>
+                                        <constraint firstItem="uy1-Dn-LQg" firstAttribute="bottom" secondItem="don-de-tlb" secondAttribute="bottomMargin" id="Vzl-aM-TaA"/>
+                                        <constraint firstItem="x1D-79-nIg" firstAttribute="leading" secondItem="uy1-Dn-LQg" secondAttribute="trailing" constant="8" symbolic="YES" id="bMI-60-5vS"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8x2-fq-hyI" secondAttribute="trailing" constant="20" symbolic="YES" id="lNO-ji-9jb"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="x1D-79-nIg" secondAttribute="trailing" constant="18" id="qWK-13-LA6"/>
+                                        <constraint firstItem="uy1-Dn-LQg" firstAttribute="leading" secondItem="don-de-tlb" secondAttribute="leadingMargin" id="taS-cG-Uav"/>
+                                        <constraint firstItem="uy1-Dn-LQg" firstAttribute="centerY" secondItem="don-de-tlb" secondAttribute="centerY" id="uPf-fD-86m"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="RiderNumber" destination="8x2-fq-hyI" id="N4o-Zj-TyI"/>
+                                    <outlet property="riderImage" destination="uy1-Dn-LQg" id="DB3-Vl-g61"/>
+                                    <outlet property="riderName" destination="x1D-79-nIg" id="baR-1L-X1G"/>
+                                    <outlet property="riderNumber" destination="8x2-fq-hyI" id="d1i-tn-1sN"/>
+                                    <segue destination="YDb-yI-r7b" kind="show" identifier="riderDetailsFromFullList" id="ytq-we-Inm"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -39,16 +80,16 @@
             </objects>
             <point key="canvasLocation" x="727" y="85"/>
         </scene>
-        <!--Teams Table View Controller-->
+        <!--Teams-->
         <scene sceneID="Aix-RW-YUx">
             <objects>
-                <tableViewController id="f3Y-Ni-OxM" customClass="TeamsTableViewController" customModule="MotoRiders" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="f3Y-Ni-OxM" customClass="TeamController" customModule="MotoRiders" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FvZ-Nc-I6X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="teamNameCell" id="ueO-c3-szK" customClass="TeamNameCell" customModule="MotoRiders" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="teamNameCell" id="ueO-c3-szK" customClass="TeamCell" customModule="MotoRiders" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ueO-c3-szK" id="RrJ-m1-gPw">
@@ -56,7 +97,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TeamName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pE-wL-hnw">
-                                            <rect key="frame" x="16" y="11" width="89" height="21"/>
+                                            <rect key="frame" x="16" y="11" width="325" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -66,7 +107,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="teamName" destination="1pE-wL-hnw" id="tH7-4S-sYe"/>
-                                    <segue destination="Buk-3F-I5q" kind="showDetail" id="YG0-fJ-EdA"/>
+                                    <segue destination="Buk-3F-I5q" kind="show" identifier="ridersInTeam" id="YG0-fJ-EdA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -75,20 +116,27 @@
                             <outlet property="delegate" destination="f3Y-Ni-OxM" id="oRO-qm-okv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="28u-9U-1mk"/>
+                    <navigationItem key="navigationItem" title="Teams" id="28u-9U-1mk"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4lG-Zg-Blh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="727" y="-641"/>
+            <point key="canvasLocation" x="725.60000000000002" y="-641.82908545727139"/>
         </scene>
-        <!--Riders Table View Controller-->
+        <!--Riders In Team Controller-->
         <scene sceneID="EVs-RA-saV">
             <objects>
-                <tableViewController id="Buk-3F-I5q" customClass="RidersTableViewController" customModule="MotoRiders" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Buk-3F-I5q" customClass="RidersInTeamController" customModule="MotoRiders" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="UWJ-Ns-hIE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No riders in this team" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8C9-fY-i2d">
+                            <rect key="frame" x="0.0" y="128" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ridersForSelectedTeam" rowHeight="100" id="gwz-TA-ENA" customClass="RiderNameCell" customModule="MotoRiders" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
@@ -97,38 +145,46 @@
                                     <rect key="frame" x="0.0" y="0.0" width="341" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yBw-DU-lMd">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yBw-DU-lMd">
                                             <rect key="frame" x="16" y="9" width="80" height="80"/>
-                                            <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="80" id="EeH-Vr-m4J"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rider Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsq-hf-9sr">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rider Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsq-hf-9sr">
                                             <rect key="frame" x="104" y="11" width="237" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="uIu-PU-8Dk"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xva-Wz-K2i">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xva-Wz-K2i">
                                             <rect key="frame" x="104" y="40" width="50" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="xva-Wz-K2i" firstAttribute="leading" secondItem="yBw-DU-lMd" secondAttribute="trailing" constant="8" symbolic="YES" id="Bsj-tm-ulh"/>
+                                        <constraint firstItem="xva-Wz-K2i" firstAttribute="top" secondItem="dsq-hf-9sr" secondAttribute="bottom" constant="8" symbolic="YES" id="Oku-YL-zNu"/>
                                         <constraint firstItem="yBw-DU-lMd" firstAttribute="centerY" secondItem="Nn8-Ht-6zY" secondAttribute="centerY" id="TKn-YV-LSx"/>
+                                        <constraint firstItem="xva-Wz-K2i" firstAttribute="centerY" secondItem="yBw-DU-lMd" secondAttribute="centerY" id="dum-5w-OMc"/>
+                                        <constraint firstItem="dsq-hf-9sr" firstAttribute="top" secondItem="Nn8-Ht-6zY" secondAttribute="topMargin" id="fIm-fW-CEu"/>
+                                        <constraint firstItem="dsq-hf-9sr" firstAttribute="leading" secondItem="xva-Wz-K2i" secondAttribute="leading" id="jKO-zF-HBb"/>
                                         <constraint firstItem="yBw-DU-lMd" firstAttribute="leading" secondItem="Nn8-Ht-6zY" secondAttribute="leadingMargin" id="jsB-WB-8gj"/>
                                         <constraint firstItem="yBw-DU-lMd" firstAttribute="bottom" secondItem="Nn8-Ht-6zY" secondAttribute="bottomMargin" id="m2Y-XB-hIb"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="dsq-hf-9sr" secondAttribute="trailing" constant="-8" id="wDL-aQ-tDl"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xva-Wz-K2i" secondAttribute="trailing" constant="20" symbolic="YES" id="yCF-tf-ojv"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="riderImage" destination="yBw-DU-lMd" id="e7w-aC-jVE"/>
                                     <outlet property="riderName" destination="dsq-hf-9sr" id="wiM-Pq-6o3"/>
                                     <outlet property="riderNumber" destination="xva-Wz-K2i" id="Z5L-y6-Yao"/>
+                                    <segue destination="YDb-yI-r7b" kind="show" identifier="riderDetails" id="yA1-6x-Ey8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -137,15 +193,86 @@
                             <outlet property="delegate" destination="Buk-3F-I5q" id="Qqq-78-RC9"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="noRidersLabel" destination="8C9-fY-i2d" id="dwq-Mx-Zmv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6x-5X-sBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1548" y="-642.72863568215894"/>
         </scene>
-        <!--Main Tab Bar Controller-->
+        <!--Rider Details Controller-->
+        <scene sceneID="KvJ-Q1-hpk">
+            <objects>
+                <tableViewController id="YDb-yI-r7b" customClass="RiderDetailsController" customModule="MotoRiders" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="M2q-L8-XS6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="image" rowHeight="215" id="KmG-Bg-7LZ" customClass="ImageCell" customModule="MotoRiders" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="215"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KmG-Bg-7LZ" id="v6Y-j1-GH2">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="214.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m7a-tc-org">
+                                            <rect key="frame" x="87" y="7" width="200" height="200"/>
+                                            <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="m7a-tc-org" firstAttribute="centerY" secondItem="v6Y-j1-GH2" secondAttribute="centerY" id="1rt-Ji-ACj"/>
+                                        <constraint firstItem="m7a-tc-org" firstAttribute="leading" secondItem="v6Y-j1-GH2" secondAttribute="leadingMargin" constant="71" id="muh-2g-Ted"/>
+                                        <constraint firstItem="m7a-tc-org" firstAttribute="centerX" secondItem="v6Y-j1-GH2" secondAttribute="centerX" id="zed-Bz-vgQ"/>
+                                        <constraint firstItem="m7a-tc-org" firstAttribute="top" secondItem="v6Y-j1-GH2" secondAttribute="topMargin" constant="-4" id="zh3-HC-uAJ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="riderImage" destination="m7a-tc-org" id="8Va-y7-Kj5"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="name" id="3c1-tA-iFS" customClass="NameCell" customModule="MotoRiders" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="243" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3c1-tA-iFS" id="1tI-ma-hwf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfP-FJ-QkZ">
+                                            <rect key="frame" x="39" y="11" width="296" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="dfP-FJ-QkZ" firstAttribute="centerX" secondItem="1tI-ma-hwf" secondAttribute="centerX" id="2b7-hj-zOW"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="dfP-FJ-QkZ" secondAttribute="bottom" constant="1" id="D81-qU-yU6"/>
+                                        <constraint firstItem="dfP-FJ-QkZ" firstAttribute="top" secondItem="1tI-ma-hwf" secondAttribute="topMargin" id="Iiv-Ag-NSn"/>
+                                        <constraint firstItem="dfP-FJ-QkZ" firstAttribute="leading" secondItem="1tI-ma-hwf" secondAttribute="leadingMargin" constant="23" id="lSY-py-Gou"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="riderName" destination="dfP-FJ-QkZ" id="KJK-uI-gdp"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="YDb-yI-r7b" id="jPu-7d-C1r"/>
+                            <outlet property="delegate" destination="YDb-yI-r7b" id="7fD-XL-K0G"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="327-jy-oE5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2457" y="-307"/>
+        </scene>
+        <!--Tab Bar Controller-->
         <scene sceneID="Nx0-fn-3dL">
             <objects>
-                <tabBarController id="GS7-h0-3VE" customClass="MainTabBarController" customModule="MotoRiders" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="GS7-h0-3VE" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lKo-QV-KJj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -199,4 +326,7 @@
             <point key="canvasLocation" x="-213" y="85"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ytq-we-Inm"/>
+    </inferredMetricsTieBreakers>
 </document>
